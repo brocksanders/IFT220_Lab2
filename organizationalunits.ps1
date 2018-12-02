@@ -3,7 +3,7 @@
 # you need to change "DC=ad,DC=sparky-tech,DC=com" to match your domain and update the ST initials to match or remove them
 
 Write-Host -ForegroundColor yellow "Creating OUs"
-New-ADOrganizationalUnit -Name ST_Computers -Path "DC=ad,DC=basande5,DC=lan" -Description "ST Computers"
+New-ADOrganizationalUnit -Name BS_Computers -Path "DC=ad,DC=basande5,DC=lan" -Description "ST Computers"
  New-ADOrganizationalUnit -Name Workstations -Path "OU=BS_Computers,DC=ad,DC=basande5,DC=lan"
   New-ADOrganizationalUnit -Name President -Path "OU=Workstations,OU=BS_Computers,DC=ad,DC=basande5,DC=lan"
   New-ADOrganizationalUnit -Name Finance -Path "OU=Workstations,OU=BS_Computers,DC=ad,DC=basande5,DC=lan"
@@ -14,9 +14,9 @@ New-ADOrganizationalUnit -Name ST_Computers -Path "DC=ad,DC=basande5,DC=lan" -De
  New-ADOrganizationalUnit -Name Servers -Path "OU=BS_Computers,DC=ad,DC=basande5,DC=lan"
   New-ADOrganizationalUnit -Name Hyper-V -Path "OU=Servers,OU=BS_Computers,DC=ad,DC=basande5,DC=lan"
   New-ADOrganizationalUnit -Name Exchange -Path "OU=Servers,OU=BS_Computers,DC=ad,DC=basande5,DC=lan"
-New-ADOrganizationalUnit -Name ST_Groups -Path "DC=ad,DC=basande5,DC=lan" -Description "High Level Security Groups"
-New-ADOrganizationalUnit -Name ST_Privileged_Accounts -Path "DC=ad,DC=basande5,DC=lan" -Description "Privileged Accounts"
-New-ADOrganizationalUnit -Name ST_Users -Path "DC=ad,DC=basande5,DC=lan" -Description "Non-Privileged Accounts"
+New-ADOrganizationalUnit -Name BS_Groups -Path "DC=ad,DC=basande5,DC=lan" -Description "High Level Security Groups"
+New-ADOrganizationalUnit -Name BS_Privileged_Accounts -Path "DC=ad,DC=basande5,DC=lan" -Description "Privileged Accounts"
+New-ADOrganizationalUnit -Name BS_Users -Path "DC=ad,DC=basande5,DC=lan" -Description "Non-Privileged Accounts"
 Write-Host -ForegroundColor yellow "Done creating OUs"
 Write-Host -ForegroundColor yellow ""
 
